@@ -155,7 +155,7 @@ export default function HomeScreen({navigation, route}: Props) {
         </View>
 
         {/* Render Product */}
-        <View style={{height: '55%'}}>
+        <View style={{height: '50%'}}>
           <FlatList
             horizontal
             showsHorizontalScrollIndicator={false}
@@ -165,8 +165,45 @@ export default function HomeScreen({navigation, route}: Props) {
           />
         </View>
         {/* Footer */}
-        <View>
-          <Text>Light</Text>
+        <View style={{height: '20%', justifyContent: 'center'}}>
+          <TouchableOpacity
+            style={{
+              width: '80%',
+              alignSelf: 'center',
+              borderWidth: 1,
+              borderColor: COLORS.lightGray,
+              padding: SIZES.padding,
+              backgroundColor: COLORS.lightGray,
+              borderRadius: SIZES.padding,
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+            }}>
+            <View
+              style={{
+                backgroundColor: COLORS.gray,
+                padding: SIZES.base,
+                borderRadius: SIZES.radius,
+              }}>
+              <Image style={{width: 20, height: 20}} source={icons.bar} />
+            </View>
+            <View>
+              <Text style={{...FONTS.h2, color: COLORS.dark}}>
+                Spacial Offer
+              </Text>
+              <Text style={{...FONTS.body3, color: COLORS.dark}}>
+                Adding to your cart
+              </Text>
+            </View>
+            <View
+              style={{
+                backgroundColor: COLORS.primary,
+                padding: SIZES.base,
+                borderRadius: SIZES.radius,
+              }}>
+              <Image style={{width: 20, height: 20}} source={icons.cart} />
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
     </SafeAreaView>
