@@ -54,6 +54,7 @@ export default function HomeScreen({navigation, route}: Props) {
   const renderProduct = ({item}: {item: ProductType}) => {
     return (
       <TouchableOpacity
+        onPress={() => navigation.navigate('DETAILS', item)}
         style={{
           marginLeft: SIZES.padding,
         }}>
